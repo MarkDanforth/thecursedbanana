@@ -1,0 +1,54 @@
+.content {
+    padding-top: 70px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #ffe800;
+    height: 70px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    border-bottom: black 3px solid;
+    padding-left: 110px;
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 3em;
+    box-sizing: border-box;
+    line-height: 66px;
+}
+
+header > img {
+    position: absolute;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    background-color: #ffe800;
+    margin: 10px;
+    border: black 1px solid;
+}
+
+nav {
+    display: inline-block;
+    font-family: 'Amatic SC', cursive;
+    font-size: 0.6em;
+    font-weight: 700;
+    line-height: 66px;
+}
+
+nav span {
+    padding: 0px 20px;
+}
+
+nav a {
+    color: red;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: darkred;
+}
