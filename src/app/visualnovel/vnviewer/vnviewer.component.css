@@ -1,4 +1,9 @@
+:host {
+    height: 100%;
+}
+
 .title-screen {
+    height: 100%;
     display: flex;
     padding: 75px;
     width: 100%;
@@ -7,7 +12,7 @@
     flex-direction: column;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
-    background-image: url('./../../../assets/shop_faint.png');
+    background-image: url('./../../../assets/shop_faint_b.png');
     background-position: center;
 }
 
