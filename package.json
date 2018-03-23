@@ -4,11 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run start:dev",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:dev": "npm run app:watch | npm run server:debug",
+    "app:watch": "ng build --watch -o dist/",
+    "server:debug": "nodemon --debug --config ./nodemon.json ./app.js"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +44,7 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
+    "nodemon": "^1.17.2",
     "typescript": "~2.0.0"
   }
 }
