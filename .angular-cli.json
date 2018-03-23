@@ -12,13 +12,13 @@
         "favicon.ico",
         "web.config",
         {
-          "glob": "index.js",
-          "input": "./server/",
+          "glob": "app.js",
+          "input": "./../",
           "output": "./"
         },
         {
           "glob": "package.json",
-          "input": "./server/",
+          "input": "./../",
           "output": "./"
         }
       ],
