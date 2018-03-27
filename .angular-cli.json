@@ -10,17 +10,7 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "web.config",
-        {
-          "glob": "app.js",
-          "input": "./../",
-          "output": "./"
-        },
-        {
-          "glob": "package.json",
-          "input": "./../",
-          "output": "./"
-        }
+        "web.config"
       ],
       "index": "index.html",
       "main": "main.ts",
