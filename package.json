@@ -5,11 +5,13 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run start:dev",
+    "runprod": "npm run start:prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start:dev": "npm run app:watch | npm run server:debug",
+    "start:prod": "ng build --prod && node app.js",
     "app:watch": "ng build --watch -o dist/",
     "server:debug": "nodemon --debug --config ./nodemon.json ./app.js"
   },

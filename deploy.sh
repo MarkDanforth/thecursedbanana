@@ -114,23 +114,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
   eval $NPM_CMD install --only=dev
+  eval $NPM_CMD run runprod
   exitWithMessageOnError "npm failed"
-  cd - > /dev/null
-fi
-
-# 4. Install Bower modules
-if [ -e "$DEPLOYMENT_TARGET/bower.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval ./node_modules/.bin/bower install
-  exitWithMessageOnError "bower failed"
-  cd - > /dev/null
-fi
-
-# 5. Run Gulp Task
-if [ -e "$DEPLOYMENT_TARGET/gulpfile.js" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval ./node_modules/.bin/gulp prod
-  exitWithMessageOnError "gulp failed"
   cd - > /dev/null
 fi
 
