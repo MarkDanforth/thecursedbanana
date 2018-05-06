@@ -2,10 +2,13 @@
   "name": "cb-base",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": ">=6.9.1"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "npm run start:dev",
-    "runprod": "npm run start:prod",
+    "start": "npm run start:prod",
+    "rundev": "npm run start:dev",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,7 +16,7 @@
     "start:dev": "npm run app:watch | npm run server:debug",
     "start:prod": "ng build --prod && node app.js",
     "app:watch": "ng build --watch -o dist/",
-    "server:debug": "nodemon --debug --config ./nodemon.json ./app.js"
+    "server:debug": "nodemon --inspect --config ./nodemon.json ./app.js"
   },
   "private": true,
   "dependencies": {
