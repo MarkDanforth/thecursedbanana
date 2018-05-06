@@ -7,16 +7,17 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod && node app.js",
+    "start": "node app.js",
     "rundev": "npm run start:dev",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start:dev": "npm run app:watch | npm run server:debug",
     "start:prod": "ng build --prod && node app.js",
     "app:watch": "ng build --watch -o dist/",
-    "server:debug": "nodemon --inspect --config ./nodemon.json ./app.js"
+    "server:debug": "nodemon --inspect --config ./nodemon.json ./app.js",
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
