@@ -7,7 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "npm run start:prod",
+    "start": "ng build --prod && node app.js",
     "rundev": "npm run start:dev",
     "build": "ng build",
     "test": "ng test",
