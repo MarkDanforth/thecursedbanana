@@ -4,6 +4,7 @@ const http = require('http');
 
 const app = express();
 
+app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/bleh', (req, res) => {
